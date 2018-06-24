@@ -43,8 +43,14 @@ class ToolTips {
         $atts = array_merge( array(
             'tip'       => '',
             'position'  => 'top',
+            'float'     => 'right',
             'underline' => true,
         ), $atts );
+
+        // Enforce a position of 'top' or 'bottom'
+        if( 'top' !== $atts['position'] && 'bottom' !== $atts['position'] ) {
+            $atts['position'] = 'top';
+        }
 
         ob_start();
         include 'templates/tooltip.php';

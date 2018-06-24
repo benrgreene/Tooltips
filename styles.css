@@ -3,6 +3,10 @@
   display: inline-block;
 }
 
+.tooltip__container.underline {
+  border-bottom: 3px solid #CCC;
+}
+
 .tooltip__tip {
   display: none;
   position: absolute;

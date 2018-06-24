@@ -36,11 +36,14 @@ class ToolTips {
      *   - Tip: the text that is displayed as the tooltip
      *   - Position: if the tooltip should be above or below the content.
      *               defaults to 'top'
+     *   - Underline: whether or not to display underlines beneath 
+     *                the tooltip triggers (defaults to true)
     */
     public function display_tooltip( $atts, $content='' ) {
         $atts = array_merge( array(
-            'tip'      => '',
-            'position' => 'top',
+            'tip'       => '',
+            'position'  => 'top',
+            'underline' => true,
         ), $atts );
 
         ob_start();

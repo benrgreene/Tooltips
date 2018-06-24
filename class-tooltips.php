@@ -20,7 +20,12 @@ class ToolTips {
     }
 
     public function __construct() {
+        add_action( 'wp_enqueue_scripts', array( $this, 'add_styles' ) );
         add_shortcode( 'tooltip', array( $this, 'display_tooltip' ) );
+    }
+
+    public function add_styles() {
+        wp_enqueue_style( 'tooltip-styles', plugins_url( 'styles.css', __FILE__ ) );
     }
 
     /**

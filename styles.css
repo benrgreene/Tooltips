@@ -1,0 +1,39 @@
+.tooltip__container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip__tip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 300px; 
+  box-sizing: border-box;
+}
+
+.tooltip__tip-content {
+  position: relative;
+  display: inline-block;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 13px;
+  background-color: #FFF;
+}
+
+.tooltip__tip-content::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 8px;
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+}
+
+.tooltip__container:hover .tooltip__tip {
+  display: block;
+}
